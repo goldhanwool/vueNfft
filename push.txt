@@ -1,0 +1,297 @@
+1> 방문 스켸줄러 자동마감 push 
+요청프로시져: sp_push_schedule_visit_end
+푸쉬번호: 9,11번
+내용: 방문 시간 마감되고 입찰로 넘어갈 경우
+푸쉬 대상: 배출자, 수거자 
+조건: 
+1. 푸쉬를 보낼 배출 물건은 푸쉬가 발송되지 않았음 
+2. 푸쉬를 보낼 배출 물건은 입찰 중 
+
+Sample Data
+input =>
+{
+  state: visit_end
+}
+
+output=>
+{
+  order_Id : 235
+    {
+      배출자
+      FCM;
+      TITLE: 방문신청마감되었습니다
+      BODY;
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+    {
+      수거자들
+      FCM;
+      TITLE: 방문신청마감되었습니다
+      BODY;
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+}
+{
+  order_Id : 249
+    {
+      배출자
+      FCM;
+      TITLE: 방문신청마감되었습니다
+      BODY;
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+    {
+      수거자들
+      FCM;
+      TITLE: 방문신청마감되었습니다
+      BODY;
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+}
+...
+
+2> 방문 스켸줄러 자동마감 push 
+요청프로시져: sp_push_schedule_visit_end2
+푸쉬번호: 12번
+내용: 방문 신청 업체가 없이 방문 시간 마감되고 거래 종료
+푸쉬 대상: 배출자
+조건: 
+1. 푸쉬를 보낼 배출 물건은 푸쉬가 발송되지 않았음 
+2. 거래가 종료된 상태여야함.   
+
+Sample Data
+input =>
+{
+state: visit_end
+}
+
+output=>
+{
+  order_Id : 235
+    {
+      배출자
+      FCM;
+      TITLE: 방문신청마감되었습니다
+      BODY;
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+}
+{
+  order_Id : 249
+    {
+      배출자
+      FCM;
+      TITLE: 방문신청마감되었습니다
+      BODY;
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+}
+...
+
+
+3> 방문 스켸줄러 마감 하루 전 push 
+요청프로시져:  sp_push_schedule_visit_before_end
+푸쉬번호: 8번
+=> 보류
+
+
+4> 입찰 스켸줄러 자동마감 push 
+요청프로시져: sp_push_schedule_bid_end
+푸쉬번호: 19번
+내용: 입찰 시간 마감되고 선정으로 넘어갈 경우
+푸쉬 대상: 배출자, 수거자 
+조건: 
+1. 푸쉬를 보낼 배출 물건은 방문 종료 푸쉬, 입찰1시간 마감 푸쉬는 발송되었으나 
+입찰 마감 푸쉬가 발송되지 않았음 
+2. 푸쉬를 보낼 배출 물건은 선정 중 상태여야함
+3. 배출자와 수거자에게 보내는 PUSH 메세지가 다름. 
+배출자는 낙찰자 확인 요청 PUSH 메세지를 수거자는 선정대기 PUSH 메세지를 받음
+
+Sample Data
+input =>
+{
+state: bid_end
+}
+
+output=>
+{
+  order_Id : 235
+    {
+      배출자
+      FCM;
+      TITLE;
+      BODY: 낙찰자 확인해주세요,
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+    {
+      수거자들
+      FCM;
+      TITLE;
+      BODY: 선정대기해주세요.;
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+}
+{
+  order_Id : 249
+    {
+      배출자
+      FCM;
+      TITLE: 낙찰자 확인해주세요,
+      BODY;
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+    {
+      수거자들
+      FCM;
+      TITLE;
+      BODY: 선정대기해주세요.;
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+}
+...
+
+
+5> 입찰 스켸줄러 마감 1시간 전 push 
+요청프로시져: sp_push_schedule_bid_before_end
+푸쉬번호: 17번
+내용: 입찰 시간 1시간 전 입찰 마감 알림
+푸쉬 대상: 배출자, 수거자 
+조건: 
+1. 푸쉬를 보낼 배출 물건은 방문 종료 푸쉬는 발송되었으나 
+입찰1시간 마감 푸쉬는 발송되지 않았음 
+2. 푸쉬를 보낼 배출 물건은 입찰 중 상태여야함
+3. 마감 1시간 전 이어야함 (59분 59초~)
+
+Sample Data
+input =>
+{
+state: bid_before_end
+}
+
+output=>
+{
+  order_Id : 235
+    {
+      배출자
+      FCM;
+      TITLE;
+      BODY:  입찰 마감시간 1시간 남았습니다;
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+    {
+      수거자들
+      FCM;
+      TITLE;
+      BODY:  입찰 마감시간 1시간 남았습니다;
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+}
+{
+  order_Id : 249
+    {
+      배출자
+      FCM;
+      TITLE;
+      BODY:  입찰 마감시간 1시간 남았습니다;
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+    {
+      수거자들
+      FCM;
+      TITLE;
+      BODY:  입찰 마감시간 1시간 남았습니다;
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+}
+...
+
+
+
+6> 2일 이 후 선정 마감 후 PUSH
+요청프로시져: sp_push_schedule_select_end
+푸쉬번호: 34, 35번
+내용: 입찰 종료 후 배출자가 낙찰자 확인을 누르지 않고 2일이 지나 자동 종료했을 경우
+푸쉬 대상: 배출자, 수거자 
+조건: 
+1. 푸쉬를 보낼 배출 물건은 방문, 입찰 푸쉬가 발송되었으나 
+낙찰자 선정과 관련된 푸쉬는 발송되지 않았음 
+2. 푸쉬를 보낼 배출 물건은 선정 완료가 없이 거래 종료 상태 
+
+Sample Data
+input =>
+{
+state: select_end
+}
+
+output=>
+{
+  order_Id : 235
+    {
+      배출자
+      FCM;
+      TITLE;
+      BODY:  낙찰자를 확인하지 않아 거래가 종료되었습니다
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+    {
+      수거자들
+      FCM;
+      TITLE;
+      BODY:  해당 입찰에 유찰되었습니다. 
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+}
+{
+  order_Id : 249
+    {
+      배출자
+      FCM;
+      TITLE;
+      BODY: 낙찰자를 확인하지 않아 거래가 종료되었습니다
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+    {
+      수거자들
+      FCM;
+      TITLE;
+      BODY:  해당 입찰에 유찰되었습니다. 
+      AVATAR_PATH;
+      CATEGORY_ID;
+      CREATED_AT;
+    }
+}
+...

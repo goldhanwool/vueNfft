@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* font-family: 'Jost' */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,200;1,400;1,500&display=swap');
+/* font-family: 'Poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,200;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,200;1,400;1,500&family=Poppins:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,200;1,400;1,500&family=Poppins:wght@100;200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,200;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,200;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,200;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,200;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,200;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,200;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,200;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,200;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+font-family: 'Jost', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* CSS reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* font style */
+.m {
+	font-family: 'Poppins', sans-serif;
+}
+.n
+{
+	font-family: 'Jost', sans-serif;
+}
+
+/* main style */
+.contentMain {
+    max-width: 1200px; height: 500px; 
+    margin: auto;
+    /* background-color: rgba(245, 245, 245, 1); */
+    overflow: hidden;
+    margin-top: 50px; 
+  }
+.contentMain .mainTxt { float: left; } 
+.contentMain .mainTxt .smallTxt { 
+    font-size: 15px; float: left; 
+    margin-top: 20px; font-weight: 400;
+    /* background-color: burlywood; */
+} 
+.contentMain .mainTxt .headerTxt { 
+    font-size: 70px;
+    margin-top: 70px; font-weight: 400;
+    float: left; 
+    margin-left: 100px;
+    line-height: 100px;
+    /* background-color: aqua; */
+} 
+.contentMain .mainTxt .line {
+    border: solid 2px black;
+    margin-top: 40px;
+    width: 50px;
+}
+
+.contentNft {
+    max-width: 1200px; height: 500px; 
+    margin: auto;
+    /* background-color: lightgrey; */
+    overflow: hidden;
+}
+
+.box01 {
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    /* background-color: aqua; */
+    display: inline-block;
+}
+
+.nftImg01 {
+    width: 270px;
+    margin: auto;
+    display: block;
+    padding: 0 0 5 0px;
+    display: inline-block;
+}
+
+.nfftName {
+    font-size: 14px;
+    font-weight: 600;
+    float: left;
+    margin-left: 5px;
+}
+
+.nfftNameLeft {
+    font-size: 14px;
+    float: right;
+    margin-right: 30px;
+}
+
+.contentYoutube {
+    max-width: 1200px; height: 1200px; 
+    margin: auto;
+    background-color: rgba(245, 245, 245, 1);
+    overflow: hidden;
+}
+
+.contentYoutube .mainTxtBox { 
+    width: 1200px;
+    height: 200px
+} 
+
+.contentYoutube .mainTxtBox .line{ 
+    border: solid 2px black;
+    margin-top: 120px;
+    width: 155px;
+    margin-left: 80px;
+    display: block;
+} 
+
+.contentYoutube .mainTxtBox .brandText {
+    font-size: 50px;
+    margin-top: 10px; 
+    font-weight: 500;
+    margin-left: 80px;
+    /* background-color: aqua; */
+}
+
+.contentYoutube .titleTxtBox { 
+    width: 1200px;
+    height: 1200px;
+    overflow: hidden;
+    /* background-color: aqua; */
+} 
+
+.contentYoutube .titleTxtBox .brandSmallText {
+    font-size: 24px;
+    margin-top: 70px; 
+    font-weight: 600;
+    margin-left: 80px;
+    display: inline-block;
+    /* background-color: black; */
+    /* background-color: aqua; */
+}
+
+hr{
+    width: 1120px;
+    margin-left: 80px;
+}   
+
+
+
+
