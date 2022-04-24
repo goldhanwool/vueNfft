@@ -1,14 +1,8 @@
 <template>
-  <section class="contentYoutube">
-      <div class="mainTxtBox">
-        <div class="line" />
-        <p class="brandText n">BRAND wear the NFT</p>
-     </div>
-     <div class="titleTxtBox">   
-        <p class="brandSmallText m">New NFT List</p>
-        <hr>
-      </div>
-
+  <section class="youtubeMain">
+    <div class="frame">
+      <iframe width="1000" height="600" margin=auto src="https://www.youtube.com/embed/iDjQSdN_ig8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </section>
 </template>
 
@@ -19,5 +13,5 @@
 </script>
 
 <style>
-@import '@/assets/css/main.css'
+@import '@/assets/css/youtube.css'
 </style>

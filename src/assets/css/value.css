@@ -57,160 +57,88 @@ table {
 	font-family: 'Jost', sans-serif;
 }
 
-/* main style */
-.contentMain {
-    max-width: 1200px; height: 500px; 
+
+/* value */
+.valueMain {
+    max-width: 1200px; 
+    height: 1200px; 
     margin: auto;
-    /* background-color: rgba(245, 245, 245, 1); */
-    overflow: hidden;
-    margin-top: 50px; 
-  }
-.contentMain .mainTxt { float: left; } 
-.contentMain .mainTxt .smallTxt { 
-    font-size: 15px; float: left; 
-    margin-top: 20px; font-weight: 400;
-    /* background-color: burlywood; */
-} 
-.contentMain .mainTxt .headerTxt { 
-    font-size: 70px;
-    margin-top: 70px; font-weight: 400;
-    float: left; 
-    margin-left: 100px;
-    line-height: 100px;
-    /* background-color: aqua; */
-} 
-.contentMain .mainTxt .line {
-    border: solid 2px black;
-    margin-top: 40px;
-    width: 50px;
-}
-.contentNft {
-    max-width: 1200px; height: 500px; 
-    margin: auto;
-    /* background-color: lightgrey; */
     overflow: hidden;
 }
-.box01 {
-    width: 300px;
-    height: 500px;
-    overflow: hidden;
-    /* background-color: aqua; */
-    display: inline-block;
-}
-.nftImg01 {
-    width: 270px;
-    margin-left: 15px;
-    display: block;
-    padding: 0 0 5 0px;
-    display: inline-block;
-}
-.nfftName {
-    font-size: 14px;
-    font-weight: 600;
-    float: left;
-    margin-left: 20px;
-}
-.nfftNameLeft {
-    font-size: 14px;
-    float: right;
-    margin-right: 20px;
-}
-.contentNftIntro {
-    max-width: 1200px; height: 650px; 
-    margin: auto;
-    background-color: rgba(245, 245, 245, 1);
-    overflow: hidden;
-}
-.contentNftIntro .mainTxtBox { 
-    width: 1200px;
-    height: 200px
-} 
-.contentNftIntro .mainTxtBox .line{ 
-    border-top: solid 4px black;
-    margin-top: 120px;
-    width: 155px;
-    margin-left: 100px;
-    display: block;
-} 
-.contentNftIntro .mainTxtBox .brandText {
-    font-size: 50px;
-    margin-top: 10px; 
-    font-weight: 500;
-    margin-left: 100px;
-    
-    /* background-color: aqua; */
-}
-.contentNftIntro.titleTxtBox { 
-    width: 1200px;
-    height: 1000px;
-    overflow: hidden;
-    /* background-color: aqua; */
-} 
-.contentNftIntro .titleTxtBox .brandSmallText {
+
+.valueMain .valueSmallText {
     font-size: 18px;
-    margin-top: 30px; 
+    margin-top: 120px; 
     font-weight: 600;
     margin-left: 100px;
     /* display: inline-block; */
     /* background-color: black; */
     /* background-color: aqua; */
 }
-.contentNftIntro .titleTxtBox .smallTitleline {
+.valueMain .smallTitleline {
     border-bottom: solid 1px black;
     width: 1000px;
     margin-top: 15px;
     margin-left: 100px;
 }
-.contentNftIntro .titleTxtBox .contentTxtBox {
+
+.valueMain .contentTxtBox {
     width: 1000px;
-    height: 1000px;
-    margin-left: 100px;
-    /* background-color: rgb(255, 255, 255); */
-}
-.contentNftIntro .titleTxtBox .contentTxtBoxIn {
-    width: 50%;
     height: 1200px;
-    /* background-color: rgb(150, 150, 150); */
-    float: left;
+    /* background-color: rgba(255, 255, 255, 0.587); */
+    margin: auto;
+    overflow: hidden;
+}
 
-}
-.contentNftIntro .titleTxtBox .contentTxtBoxIn2 {
+.valueMain .contentTxtBox .contentTxtBoxIn {
     width: 50%;
-    height: 1200px;
-    /* background-color: rgb(255, 255, 255); */
+    height: 300px;
+    /* background-color: rgb(95, 16, 16); */
     float: left;
 }
-.contentNftIntro .titleTxtBox .contentTxtBoxIn .wearSmallText {
-    margin-top: 60px;
-    font-size: 25px;
-    font-weight: 600;
-
+.valueMain .contentTxtBox .contentTxtBoxIn2 {
+    width: 50%;
+    height: 300px;
+    /* background-color: rgb(17, 3, 3); */
+    float: left;
 }
-.contentNftIntro .titleTxtBox .contentTxtBoxIn .wearSmallText2 {
-    margin-top: 10px;
-    font-size: 25px;
-    font-weight: 400;
 
+.valueMain .contentTxtBox .imageBox {
+    width: 40%;
+    height: 300px;
+    /* background-color: rgb(17, 3, 3); */
+    float: left;
 }
-.contentNftIntro .titleTxtBox .contentTxtBoxIn .wearSmallText3 {
-    margin-top: 15px;
-    font-size: 40px;
+.valueMain .contentTxtBox .imageBox .valueImage{
+    width: 85%;
+    height: 60%;
+    /* background-color: rgb(17, 3, 3); */
+    float: left;
+    margin-top: 90px;
+}
+.valueMain .contentTxtBox .textBox {
+    width: 60%;
+    height: 400px;
+    /* background-color: rgb(206, 27, 27); */
+    float: left;
+}
+
+.valueMain .contentTxtBox .textBoxIn {
+    width: 100%;
+    /* background-color: rgb(27, 206, 146); */
+    margin: auto;
+    margin-top: 140px;
+    font-size: 20px;
     font-weight: 500;
-    font-style: italic;
 }
-.contentNftIntro .titleTxtBox .contentTxtBoxIn2 .wearSmallText {
-    margin-top: 60px;
-    font-size: 12px;
-    font-weight: 400;
-    color: rgb(143, 143, 143);
-    line-height:20px;
-}
-.contentNftIntro .titleTxtBox .contentTxtBoxIn2 .wearSmallText2 {
-    margin-top: 10px;
-    font-size: 12px;
-    font-weight: 400;
-    color: rgb(143, 143, 143);
-    line-height:20px; 
+
+.valueMain .contentTxtBox .textBoxIn2 {
+    width: 80%;
+    color: rgb(106, 106, 106);
+    float: left;
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 20px; 
 }
 
 
